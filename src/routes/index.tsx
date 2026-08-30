@@ -42,7 +42,7 @@ const githubUrl = "https://github.com/lakshitbansal2555-abc";
 const linkedinUrl = "https://linkedin.com/in/lakshit-bansal-828402384";
 const emailUrl = "mailto:lakshitbansal09@gmail.com";
 
-const skillGroups = [
+const skillGroups: Array<[string, string[]]> = [
   ["Languages", ["Python", "Java", "C", "C++"]],
   ["Frameworks", ["FastAPI", "Flask"]],
   ["Databases", ["SQLAlchemy", "MySQL", "Firebase"]],
@@ -78,7 +78,7 @@ function Portfolio() {
   const terminalLines = ["$ whoami", "$ status: securing systems...", "$ focus: automation + defense"];
 
   useEffect(() => {
-    const target = terminalLines[lineIndex];
+    const target = terminalLines[lineIndex] ?? terminalLines[0];
     if (typedLine.length < target.length) {
       const timer = window.setTimeout(() => setTypedLine(target.slice(0, typedLine.length + 1)), 48);
       return () => window.clearTimeout(timer);
