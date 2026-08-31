@@ -79,7 +79,7 @@ function Portfolio() {
   const terminalLines = ["$ whoami", "$ status: securing systems...", "$ focus: automation + defense"];
 
   useEffect(() => {
-    const target = terminalLines[lineIndex] ?? terminalLines[0];
+    const target = terminalLines[lineIndex] ?? terminalLines[0] ?? "";
     if (typedLine.length < target.length) {
       const timer = window.setTimeout(() => setTypedLine(target.slice(0, typedLine.length + 1)), 48);
       return () => window.clearTimeout(timer);
