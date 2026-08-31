@@ -147,7 +147,7 @@ function Portfolio() {
           <div className="relative mx-auto w-full max-w-lg lg:justify-self-end">
             <div className="absolute -inset-10 bg-neon/5 blur-3xl" aria-hidden="true" />
             <div className="relative border border-neon/35 bg-terminal-panel panel-glow">
-              <div className="flex items-center justify-between border-b border-border px-4 py-3 font-display text-[10px] tracking-[0.12em] text-terminal-muted"><span className="flex items-center gap-2"><Terminal size={13} className="text-neon" /> bash — lakshit@secure</span><span className="flex items-center gap-2"><img src={profileAsset.url} alt="Lakshit Bansal" className="h-6 w-6 rounded-full border border-neon/50 object-cover" /><span className="text-neon">●●●</span></div>
+              <div className="flex items-center justify-between border-b border-border px-4 py-3 font-display text-[10px] tracking-[0.12em] text-terminal-muted"><span className="flex items-center gap-2"><Terminal size={13} className="text-neon" /> bash — lakshit@secure</span><span className="flex items-center gap-2"><img src={profileAsset.url} alt="Lakshit Bansal" className="h-6 w-6 rounded-full border border-neon/50 object-cover" /><span className="text-neon">●●●</span></span></div>
               <div className="min-h-[290px] p-6 font-display text-sm leading-8 sm:min-h-[340px] sm:p-8">
                 <div className="mb-10 text-terminal-muted">// terminal session started<br /><span className="text-neon">// encryption: active</span></div>
                 <div className="text-cyan">{typedLine}<span className="ml-1 inline-block h-5 w-2 translate-y-1 animate-pulse bg-neon" /></div>
