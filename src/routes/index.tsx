@@ -23,6 +23,7 @@ import {
   Zap,
 } from "lucide-react";
 import resumeAsset from "../assets/lakshit-bansal-resume.pdf.asset.json";
+import profileAsset from "../assets/lakshit-profile.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
