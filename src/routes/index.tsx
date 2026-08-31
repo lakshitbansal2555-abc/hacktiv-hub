@@ -23,6 +23,7 @@ import {
   Zap,
 } from "lucide-react";
 import resumeAsset from "../assets/lakshit-bansal-resume.pdf.asset.json";
+import profileAsset from "../assets/lakshit-profile.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -78,7 +79,7 @@ function Portfolio() {
   const terminalLines = ["$ whoami", "$ status: securing systems...", "$ focus: automation + defense"];
 
   useEffect(() => {
-    const target = terminalLines[lineIndex] ?? terminalLines[0];
+    const target = terminalLines[lineIndex] ?? terminalLines[0] ?? "";
     if (typedLine.length < target.length) {
       const timer = window.setTimeout(() => setTypedLine(target.slice(0, typedLine.length + 1)), 48);
       return () => window.clearTimeout(timer);
@@ -126,7 +127,7 @@ function Portfolio() {
         <div className="mx-auto grid min-h-[calc(100vh-73px)] max-w-7xl items-center gap-16 px-5 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-24">
           <div className="relative z-10">
             <div className="mb-8 flex items-center gap-3 font-display text-xs uppercase tracking-[0.18em] text-neon"><span className="h-px w-10 bg-neon" /> available for security & automation work</div>
-            <p className="mb-4 font-display text-sm text-cyan">Hello, I&apos;m</p>
+            <div className="mb-5 flex items-center gap-3"><img src={profileAsset.url} alt="Lakshit Bansal" className="h-14 w-14 rounded-full border border-neon/50 object-cover shadow-[0_0_18px_color-mix(in_oklab,var(--color-neon)_25%,transparent)]" /><p className="font-display text-sm text-cyan">Hello, I&apos;m</p></div>
             <h1 className="max-w-4xl font-display text-5xl font-semibold leading-[1.04] tracking-tight text-terminal-foreground sm:text-7xl lg:text-8xl">Lakshit<br /><span className="text-neon text-glow">Bansal.</span></h1>
             <p className="mt-7 max-w-xl text-lg leading-8 text-terminal-muted">Cybersecurity &amp; Automation Developer building defensive systems, security tooling, and dependable backend workflows.</p>
             <div className="mt-9 flex flex-wrap gap-3">
@@ -146,7 +147,7 @@ function Portfolio() {
           <div className="relative mx-auto w-full max-w-lg lg:justify-self-end">
             <div className="absolute -inset-10 bg-neon/5 blur-3xl" aria-hidden="true" />
             <div className="relative border border-neon/35 bg-terminal-panel panel-glow">
-              <div className="flex items-center justify-between border-b border-border px-4 py-3 font-display text-[10px] tracking-[0.12em] text-terminal-muted"><span className="flex items-center gap-2"><Terminal size={13} className="text-neon" /> bash — lakshit@secure</span><span className="text-neon">●●●</span></div>
+              <div className="flex items-center justify-between border-b border-border px-4 py-3 font-display text-[10px] tracking-[0.12em] text-terminal-muted"><span className="flex items-center gap-2"><Terminal size={13} className="text-neon" /> bash — lakshit@secure</span><span className="flex items-center gap-2"><img src={profileAsset.url} alt="Lakshit Bansal" className="h-6 w-6 rounded-full border border-neon/50 object-cover" /><span className="text-neon">●●●</span></span></div>
               <div className="min-h-[290px] p-6 font-display text-sm leading-8 sm:min-h-[340px] sm:p-8">
                 <div className="mb-10 text-terminal-muted">// terminal session started<br /><span className="text-neon">// encryption: active</span></div>
                 <div className="text-cyan">{typedLine}<span className="ml-1 inline-block h-5 w-2 translate-y-1 animate-pulse bg-neon" /></div>
