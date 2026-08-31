@@ -127,7 +127,7 @@ function Portfolio() {
         <div className="mx-auto grid min-h-[calc(100vh-73px)] max-w-7xl items-center gap-16 px-5 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-24">
           <div className="relative z-10">
             <div className="mb-8 flex items-center gap-3 font-display text-xs uppercase tracking-[0.18em] text-neon"><span className="h-px w-10 bg-neon" /> available for security & automation work</div>
-            <p className="mb-4 font-display text-sm text-cyan">Hello, I&apos;m</p>
+            <div className="mb-5 flex items-center gap-3"><img src={profileAsset.url} alt="Lakshit Bansal" className="h-14 w-14 rounded-full border border-neon/50 object-cover shadow-[0_0_18px_color-mix(in_oklab,var(--color-neon)_25%,transparent)]" /><p className="font-display text-sm text-cyan">Hello, I&apos;m</p></div>
             <h1 className="max-w-4xl font-display text-5xl font-semibold leading-[1.04] tracking-tight text-terminal-foreground sm:text-7xl lg:text-8xl">Lakshit<br /><span className="text-neon text-glow">Bansal.</span></h1>
             <p className="mt-7 max-w-xl text-lg leading-8 text-terminal-muted">Cybersecurity &amp; Automation Developer building defensive systems, security tooling, and dependable backend workflows.</p>
             <div className="mt-9 flex flex-wrap gap-3">
